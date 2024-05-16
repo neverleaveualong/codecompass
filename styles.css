@@ -30,7 +30,7 @@ svg{
     text-align: left;
 }
 .sidebar {
-    width: 250px;
+    width: 175px;
     background-color: #003366;
     color: white;
     display: flex;
@@ -51,7 +51,7 @@ svg{
 }
 
 .menu li {
-    margin: 20px 0;
+    margin: 37px 0;
 }
 
 .menu a {
