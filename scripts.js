@@ -1,6 +1,40 @@
-function goToNextPage() {
-    window.location.href = 'next.html';
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const submenuParent = document.querySelector('.submenu-parent');
+    const submenu = document.querySelector('.submenu');
+    const menuItems = document.querySelectorAll('.menu > li:not(.submenu-parent)');
 
-// 8초 후에 다음 페이지로 이동 (텍스트 애니메이션이 끝난 후)
-setTimeout(goToNextPage, 4000);
+    let timeoutId;
+
+    submenuParent.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+        submenu.classList.add('show');
+        submenu.style.display = 'block';
+    });
+
+    submenuParent.addEventListener('mouseleave', function(event) {
+        timeoutId = setTimeout(() => {
+            submenu.classList.remove('show');
+            submenu.style.display = 'none';
+        }, 1000);
+    });
+
+    submenu.addEventListener('mouseenter', function() {
+        clearTimeout(timeoutId);
+        submenu.classList.add('show');
+        submenu.style.display = 'block';
+    });
+
+    submenu.addEventListener('mouseleave', function() {
+        submenu.classList.remove('show');
+        submenu.style.display = 'none';
+    });
+
+    menuItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            submenu.classList.remove('show');
+            submenu.style.display = 'none';
+        });
+    });
+
+    
+});
