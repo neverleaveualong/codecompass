@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Page</title>
+    <title>KANGWON_CSE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <img src="kanglogo.svg" alt="Gangwon University Logo" class="logo">
-        <ul class="menu">
-            <li><a href="#home">홈</a></li>
-            <li><a href="#about">전공트랙</a></li>
-            <li><a href="#services">교수진</a></li>
-            <li><a href="#contact">연구분야</a></li>
-        </ul>
+    <div class="container">
+        <div class="sidebar">
+            <img src="kanglogo.svg" alt="Gangwon University Logo" class="logo">
+            <ul class="menu">
+                <li><a href="#home">홈</a></li>
+                <li class="submenu-parent">
+                    <a href="#about">전공트랙</a>
+                    <ul class="submenu">
+                        <li><a href="#guide">학부안내</a></li>
+                        <li><a href="#registration">수강신청안내</a></li>
+                        <li><a href="#about">전공트랙</a></li>
+                        <li><a href="#graduation">졸업규정</a></li>
+                        <li><a href="#scholarships">장학제도</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services">교수진</a></li>
+                <li><a href="#contact">연구분야</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>강원대학교 컴퓨터공학부</h1>
+            <p>Kangwon National University<br>
+            Dept. of Computer Science and Engineering</p>
+        </div>
     </div>
-    <div class="content">
-        <h1>강원대학교 컴퓨터공학부</h1>
-        <p>Kangwon National University<br>
-        Dept. of Computer Science and Engineering</p>
-    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
