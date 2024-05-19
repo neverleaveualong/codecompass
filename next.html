@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KANGWON_CSE</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <div class="sidebar">
             <img src="kanglogo.svg" alt="Gangwon University Logo" class="logo">
             <ul class="menu">
-                <li><a href="#home">홈</a></li>
+                <li><a href="#" onclick="showSection('home-content')">홈</a></li>
                 <li class="submenu-parent">
-                    <a href="#about">전공트랙</a>
+                    <a href="#" onclick="return false;">전공트랙</a>
                     <ul class="submenu">
-                        <li><a href="#guide">학부안내</a></li>
-                        <li><a href="#registration">수강신청안내</a></li>
-                        <li><a href="#about">전공트랙</a></li>
-                        <li><a href="#graduation">졸업규정</a></li>
-                        <li><a href="#scholarships">장학제도</a></li>
+                        <li><a href="#" onclick="showSection('guide-content')">학부안내</a></li>
+                        <li><a href="#" onclick="showSection('registration-content')">수강신청안내</a></li>
+                        <li><a href="#" onclick="showSection('about-content')">전공트랙</a></li>
+                        <li><a href="#" onclick="showSection('graduation-content')">졸업규정</a></li>
+                        <li><a href="#" onclick="showSection('scholarships-content')">장학제도</a></li>
                     </ul>
                 </li>
-                <li><a href="#services">교수진</a></li>
-                <li><a href="#contact">연구분야</a></li>
+                <li><a href="#" onclick="showSection('services-content')">교수진</a></li>
+                <li><a href="#" onclick="showSection('contact-content')">연구분야</a></li>
             </ul>
         </div>
         <div class="content">
-            <h1>강원대학교 컴퓨터공학부</h1>
-            <p>Kangwon National University<br>
-            Dept. of Computer Science and Engineering</p>
+            <div id="home-content" class="section-content">
+                <h1>강원대학교 컴퓨터공학부</h1>
+                <p>Kangwon National University<br>Dept. of Computer Science and Engineering</p>
+            </div>
+            <div id="guide-content" class="section-content" style="display: none;">
+                <h1>학부안내</h1>
+                <p>여기에 학부안내 페이지 내용을 입력하세요.</p>
+            </div>
+            <div id="registration-content" class="section-content" style="display: none;">
+                <h1>수강신청안내</h1>
+                <p>여기에 수강신청안내 페이지 내용을 입력하세요.</p>
+            </div>
+            <div id="about-content" class="section-content" style="display: none;">
+                <h1>전공트랙</h1>
+                <p>여기에 전공트랙 페이지 내용을 입력하세요.</p>
+            </div>
+            <div id="graduation-content" class="section-content" style="display: none;">
+                <h1>졸업규정</h1>
+                <p>여기에 졸업규정 페이지 내용을 입력하세요.</p>
+            </div>
+            <div id="scholarships-content" class="section-content" style="display: none;">
+                <h1>장학제도</h1>
+                <p>여기에 장학제도 페이지 내용을 입력하세요.</p>
+            </div>
+            <div id="services-content" class="section-content" style="display: none;">
+                <h1>교수진</h1>
+                <p>여기에 교수진 페이지 내용을 입력하세요.</p>
+            </div>
+            <div id="contact-content" class="section-content" style="display: none;">
+                <h1>연구분야</h1>
+                <p>여기에 연구분야 페이지 내용을 입력하세요.</p>
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>
 </body>
+
 </html>
