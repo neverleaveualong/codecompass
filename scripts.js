@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// 섹션을 보여주는 함수
+
 function showSection(sectionId) {
     const sections = document.querySelectorAll('.section-content');
     sections.forEach(section => {
