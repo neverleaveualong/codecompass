@@ -35,6 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
             submenu.style.display = 'none';
         });
     });
-
-    
 });
+
+// 섹션을 보여주는 함수
+function showSection(sectionId) {
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+        section.style.display = 'none';
+    });
+
+    const activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+        activeSection.style.display = 'block';
+    }
+}
